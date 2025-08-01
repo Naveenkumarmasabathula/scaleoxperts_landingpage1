@@ -23,22 +23,15 @@ export default function Hero() {
               proven growth marketing strategies that deliver measurable results.
             </p>
 
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary p-4 px-8 py-3 text-sm font-medium text-primary-foreground shadow-lg transition-all duration-300 hover:bg-primary/90"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:bg-primary/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
               >
                 Get Free Growth Plan
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </motion.button>
-              
-              <a
-                href="#testimonials"
-                className="text-sm font-semibold leading-6 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                See Results <span aria-hidden="true">→</span>
-              </a>
             </div>
           </motion.div>
 

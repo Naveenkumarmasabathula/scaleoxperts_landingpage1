@@ -12,6 +12,7 @@ interface HeroAction {
   href: string;
   icon?: React.ReactNode;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "glow";
+  target?: "_blank";
 }
 
 interface HeroProps {
@@ -20,6 +21,7 @@ interface HeroProps {
     action: {
       text: string;
       href: string;
+      target?: "_blank";
     };
   };
   title: string;
@@ -47,15 +49,26 @@ export function HeroSection({
       
       <div className="relative z-10 mx-auto max-w-container">
         <div className="flex flex-col items-center gap-8 sm:gap-12 lg:gap-16 text-center">
-          {/* Badge */}
+          {/* Badge with Animated Shiny Border */}
           {badge && (
-            <Badge variant="outline" className="animate-appear gap-2 px-4 py-2 text-sm">
-              <span className="text-muted-foreground">{badge.text}</span>
-              <a href={badge.action.href} className="flex items-center gap-1 hover:text-foreground transition-colors">
-                {badge.action.text}
-                <ArrowRightIcon className="h-3 w-3" />
-              </a>
-            </Badge>
+            <div className="relative group cursor-pointer">
+              {/* Animated shiny border */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-orange-500 to-primary rounded-full opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-orange-500 to-primary rounded-full opacity-0 group-hover:opacity-75 blur-sm transition duration-1000 group-hover:duration-200"></div>
+              
+              {/* Rotating shine effect */}
+              <div className="absolute -inset-0.5 rounded-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-conic from-transparent via-white/20 to-transparent animate-spin" style={{animationDuration: '3s'}}></div>
+              </div>
+              
+              <Badge variant="outline" className="relative animate-appear gap-2 px-4 py-2 text-sm bg-background/90 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <span className="text-muted-foreground font-medium">{badge.text}</span>
+                <a href={badge.action.href} target={badge.action.target} className="flex items-center gap-1 text-primary hover:text-orange-500 transition-colors font-semibold">
+                  {badge.action.text}
+                  <ArrowRightIcon className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
+                </a>
+              </Badge>
+            </div>
           )}
 
           {/* Title */}
@@ -69,7 +82,7 @@ export function HeroSection({
           </p>
 
           {/* Actions */}
-          <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300 sm:gap-6">
+          <div className="relative z-10 flex justify-center gap-4 sm:gap-6">
             {actions.map((action, index) => {
               // Use FlipButton for the primary CTA (glow variant)
               if (action.variant === "glow") {
@@ -80,10 +93,11 @@ export function HeroSection({
                     backText="Let's Get Started!"
                     from="top"
                     className="h-11 px-8 py-3 text-base font-semibold rounded-md"
-                    frontClassName="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl"
-                    backClassName="bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-lg"
+                    frontClassName="bg-gradient-to-r from-orange-400 to-orange-500 text-white shadow-lg"
+                    backClassName="bg-gradient-to-r from-orange-500 to-orange-400 text-white shadow-lg"
                     icon={action.icon}
                     href={action.href}
+                    target={action.target}
                   />
                 );
               }
@@ -91,7 +105,7 @@ export function HeroSection({
               // Use regular Button for secondary actions
               return (
                 <Button key={index} variant={action.variant} size="lg" asChild>
-                  <a href={action.href} className="flex items-center gap-2 px-8 py-3 text-base font-semibold">
+                  <a href={action.href} target={action.target} className="flex items-center gap-2 px-8 py-3 text-base font-semibold">
                     {action.icon}
                     {action.text}
                   </a>

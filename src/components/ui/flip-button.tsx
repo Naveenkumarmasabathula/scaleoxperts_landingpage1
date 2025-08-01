@@ -19,8 +19,10 @@ type FlipButtonProps = HTMLMotionProps<'button'> & {
   frontClassName?: string;
   backClassName?: string;
   from?: FlipDirection;
+  neon?: boolean;
   icon?: React.ReactNode;
   href?: string;
+  target?: '_blank' | '_self' | '_parent' | '_top';
 };
 
 const DEFAULT_SPAN_CLASS_NAME =
@@ -34,8 +36,10 @@ function FlipButton({
   frontClassName,
   backClassName,
   from = 'top',
+  neon = true,
   icon,
   href,
+  target,
   ...props
 }: FlipButtonProps) {
   const isVertical = from === 'top' || from === 'bottom';
@@ -72,18 +76,20 @@ function FlipButton({
       whileHover="hover"
       whileTap={{ scale: 0.95 }}
       className={cn(
-        'relative inline-block h-10 px-4 py-2 text-sm font-medium cursor-pointer perspective-[1000px] focus:outline-none',
+        'relative group text-foreground mx-auto text-center rounded-full px-7 py-2.5 font-medium cursor-pointer perspective-[1000px] focus:outline-none',
         className,
       )}
       {...props}
     >
+
+      
       <motion.span
         data-slot="flip-button-front"
         variants={frontVariants}
         transition={transition}
         className={cn(
           DEFAULT_SPAN_CLASS_NAME,
-          'bg-muted text-black dark:text-white',
+          'bg-transparent text-foreground',
           frontClassName,
         )}
       >
@@ -98,7 +104,7 @@ function FlipButton({
         transition={transition}
         className={cn(
           DEFAULT_SPAN_CLASS_NAME,
-          'bg-primary text-primary-foreground',
+          'bg-blue-500 text-white',
           backClassName,
         )}
       >
@@ -114,7 +120,7 @@ function FlipButton({
   // If href is provided, wrap in an anchor tag
   if (href) {
     return (
-      <a href={href}>
+      <a href={href} target={target}>
         {buttonContent}
       </a>
     );

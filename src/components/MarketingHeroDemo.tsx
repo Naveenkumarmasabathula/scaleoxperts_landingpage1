@@ -1,7 +1,7 @@
 "use client"
 
 import { HeroSection } from "@/components/ui/hero-section"
-import { StarIcon, TrendingUpIcon } from "lucide-react"
+import { StarIcon } from "lucide-react"
 
 export function MarketingHeroDemo() {
   return (
@@ -10,7 +10,8 @@ export function MarketingHeroDemo() {
         text: "Limited Time Offer",
         action: {
           text: "Worth ₹6,999 - Now FREE!",
-          href: "#offer",
+          href: "https://forms.gle/5r1kNbkm6wYMbusw7",
+          target: "_blank",
         },
       }}
       title="Stop Losing Customers to Better Marketing"
@@ -20,13 +21,8 @@ export function MarketingHeroDemo() {
           text: "Claim Your Free Strategy Session",
           href: "https://forms.gle/5r1kNbkm6wYMbusw7",
           variant: "glow",
-          icon: <StarIcon className="h-5 w-5" />,
-        },
-        {
-          text: "See What You Get",
-          href: "#benefits",
-          variant: "outline",
-          icon: <TrendingUpIcon className="h-5 w-5" />,
+          target: "_blank",
+          // icon: <StarIcon className="h-5 w-5" />,
         },
       ]}
     />

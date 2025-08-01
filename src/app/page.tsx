@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import { MarketingHeroDemo } from "@/components/MarketingHeroDemo";
 import Benefits from "@/components/Benefits";
 import SocialProof from "@/components/SocialProof";
 import Testimonials from "@/components/Testimonials";
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "hsl(var(--background))" }}>
       <Header />
-      <Hero />
+      <MarketingHeroDemo />
       <Benefits />
       <SocialProof />
       <Testimonials />

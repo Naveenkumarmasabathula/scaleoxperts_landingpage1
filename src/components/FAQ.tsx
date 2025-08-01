@@ -112,7 +112,7 @@ export default function FAQ() {
             className="mt-12 text-center"
           >
             <p className="text-muted-foreground mb-4">
-              Still have questions? We're here to help.
+              Still have questions? We&apos;re here to help.
             </p>
             <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-md text-sm font-medium transition-colors">
               Schedule a Free Consultation

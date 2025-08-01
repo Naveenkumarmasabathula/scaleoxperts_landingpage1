@@ -49,6 +49,8 @@
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25); 
   --tracking-normal: 0em; 
   --spacing: 0.25rem; 
+  --brand: 27 96% 61%;
+  --brand-foreground: 31 97% 72%;
 }
 
 .dark { 
@@ -96,6 +98,8 @@
   --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10); 
   --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10); 
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25); 
+  --brand: 31 97% 72%;
+  --brand-foreground: 27 96% 61%;
 }
 
 @layer base {
@@ -103,5 +107,20 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+  .delay-1000 {
+    animation-delay: 1000ms;
   }
 }

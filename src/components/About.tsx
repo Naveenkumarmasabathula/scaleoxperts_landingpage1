@@ -49,7 +49,7 @@ export default function About() {
               </p>
               <p className="mt-4 text-base leading-7 text-muted-foreground">
                 Our team of experts brings together decades of experience in digital marketing, 
-                analytics, and business growth. We've helped over 60 companies scale their operations 
+                analytics, and business growth. We&apos;ve helped over 60 companies scale their operations 
                 and achieve sustainable growth through our proven methodologies.
               </p>
 

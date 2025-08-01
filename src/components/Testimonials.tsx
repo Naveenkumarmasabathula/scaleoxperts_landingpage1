@@ -45,7 +45,7 @@ export default function Testimonials() {
               What Our Clients Say
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Don't just take our word for it. Here's what our clients have to say about their experience with ScaleOxperts.
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience with ScaleOxperts.
             </p>
           </motion.div>
         </div>
@@ -88,7 +88,7 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <blockquote className="text-sm text-muted-foreground mb-4">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </blockquote>
                   <div>
                     <div className="font-semibold text-foreground">{testimonial.name}</div>

@@ -60,7 +60,7 @@ export const TestimonialScroll = ({
   );
 };
 
-export const TestimonialHeader = ({ translate, titleComponent }: any) => {
+export const TestimonialHeader = ({ translate, titleComponent }: { translate: any; titleComponent?: React.ReactNode }) => {
   return (
     <motion.div
       style={{

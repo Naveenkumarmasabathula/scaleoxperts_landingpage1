@@ -1,125 +1,114 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
+import React, { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Plus, Minus } from "lucide-react"
 
 const faqs = [
   {
     question: "How quickly can I expect to see results?",
-    answer: "Most clients see initial improvements within 30-60 days, with significant results typically appearing within 90 days. We provide detailed reporting every month so you can track progress in real-time.",
-    cta: "Let's discuss your timeline"
+    answer: "Most clients see initial improvements within 30-60 days, with significant results typically appearing within 90 days. We provide detailed reporting every month so you can track progress in real-time."
   },
   {
     question: "What makes ScaleOxperts different from other agencies?",
-    answer: "We combine data science with creative strategy, focusing on measurable ROI. Unlike traditional agencies, we work on a performance-based model - you only pay for results that drive real business impact.",
-    cta: "See our methodology"
+    answer: "We combine data science with creative strategy, focusing on measurable ROI. Unlike traditional agencies, we work on a performance-based model - you only pay for results that drive real business impact."
+  },
+  {
+    question: "What are your pricing options?",
+    answer: "We offer flexible pricing models including project-based, retainer, and performance-based options. Our typical engagement ranges from $5K-$50K per month depending on scope. We always start with a free strategy session."
   },
   {
     question: "Do you work with small businesses or only large companies?",
-    answer: "We work with businesses of all sizes, from startups to enterprise companies. Our strategies are scalable and customized to your specific needs and budget constraints.",
-    cta: "Check if we're a good fit"
+    answer: "We work with businesses of all sizes, from startups to enterprise companies. Our strategies are scalable and customized to your specific needs and budget constraints."
   },
   {
     question: "What industries do you specialize in?",
-    answer: "We have experience across multiple industries including SaaS, e-commerce, healthcare, and professional services. Our data-driven approach works regardless of your industry vertical.",
-    cta: "View our case studies"
+    answer: "We have experience across multiple industries including SaaS, e-commerce, healthcare, fintech, and professional services. Our data-driven approach works regardless of your industry vertical."
   },
   {
     question: "How do you measure success?",
-    answer: "We track key metrics like lead generation, conversion rates, customer acquisition cost, and ROI. You'll receive comprehensive monthly reports showing exactly how your investment is performing.",
-    cta: "Request a sample report"
+    answer: "We track key metrics like lead generation, conversion rates, customer acquisition cost, lifetime value, and ROI. You'll receive comprehensive monthly reports showing exactly how your investment is performing."
   },
   {
     question: "What's included in your growth plan?",
-    answer: "Our comprehensive growth plan includes market analysis, competitor research, strategy development, implementation roadmap, and ongoing optimization. We also provide training for your team.",
-    cta: "Get your free growth plan"
+    answer: "Our comprehensive growth plan includes market analysis, competitor research, strategy development, implementation roadmap, and ongoing optimization. We also provide training for your team."
   },
   {
-    question: "Can you help with existing marketing campaigns?",
-    answer: "Absolutely! We can audit your current campaigns, identify optimization opportunities, and enhance existing strategies. Many of our best results come from improving what's already working.",
-    cta: "Audit your campaigns"
+    question: "How do we get started working together?",
+    answer: "It's simple! Book a free 30-minute strategy session where we'll analyze your current situation, identify opportunities, and create a custom growth roadmap. If it's a good fit, we can have you up and running within a week."
   }
-];
+]
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
 
   return (
-    <section className="py-20 sm:py-32 bg-muted/30">
+    <section id="faq" className="py-20 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Frequently Asked Questions
+        <div className="mx-auto max-w-4xl">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Questions & Answers
             </h2>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Get answers to the most common questions about our growth marketing services.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Everything you need to know about working with ScaleOxperts
             </p>
-          </motion.div>
+          </div>
 
-          <div className="space-y-4">
+          {/* FAQ Items */}
+          <div className="space-y-1">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-background rounded-lg border"
+                className="border-b border-border/50 last:border-b-0"
               >
                 <button
-                  className="flex w-full items-center justify-between p-6 text-left"
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full py-6 flex items-center justify-between text-left group hover:bg-muted/30 transition-colors duration-200 px-2"
                 >
-                  <span className="font-semibold text-foreground">{faq.question}</span>
-                  {openIndex === index ? (
-                    <ChevronUp className="h-5 w-5 text-muted-foreground" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                  )}
+                  <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-200 pr-8">
+                    {faq.question}
+                  </h3>
+                  <motion.div
+                    animate={{ rotate: openIndex === index ? 45 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex-shrink-0"
+                  >
+                    <Plus className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-200" />
+                  </motion.div>
                 </button>
                 
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 pb-6"
-                  >
-                    <p className="text-muted-foreground mb-4">{faq.answer}</p>
-                    <button className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors">
-                      {faq.cta} <ArrowRight className="ml-1 h-4 w-4" />
-                    </button>
-                  </motion.div>
-                )}
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pb-6 px-2">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="mt-12 text-center"
-          >
-            <p className="text-muted-foreground mb-4">
-              Still have questions? We&apos;re here to help.
-            </p>
-            <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-md text-sm font-medium transition-colors">
-              Schedule a Free Consultation
-            </button>
-          </motion.div>
         </div>
       </div>
     </section>
-  );
-} 
+  )
+}

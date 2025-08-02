@@ -29,11 +29,11 @@ export default function Header() {
           {/* Right: Book Call Button */}
           <div className="flex-1 flex justify-end items-center">
             <button className="hidden md:block bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-medium transition-colors">
-              Book Call
+              <a href="https://cal.com/scaleoxperts-zmmvor/30min" target="_blank" rel="noopener noreferrer">Book Call</a>
             </button>
             {/* Mobile Book Call Button */}
             <button className="md:hidden bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-medium transition-colors">
-              Book Call
+              <a href="https://cal.com/scaleoxperts-zmmvor/30min" target="_blank" rel="noopener noreferrer">Book Call</a>
             </button>
           </div>
         </div>

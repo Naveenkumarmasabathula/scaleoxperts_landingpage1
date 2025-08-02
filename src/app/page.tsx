@@ -5,7 +5,6 @@ import SocialProof from "@/components/SocialProof";
 import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
-import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <Testimonials />
       <About />
       <FAQ />
-      <FinalCTA />
       <Footer />
     </main>
   );

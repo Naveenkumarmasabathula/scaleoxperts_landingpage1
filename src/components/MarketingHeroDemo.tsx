@@ -1,7 +1,6 @@
 "use client"
 
 import { HeroSection } from "@/components/ui/hero-section"
-import { StarIcon } from "lucide-react"
 
 export function MarketingHeroDemo() {
   return (

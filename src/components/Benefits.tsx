@@ -42,7 +42,6 @@ const Feature = ({
   title,
   description,
   icon,
-  index,
 }: {
   title: string;
   description: string;

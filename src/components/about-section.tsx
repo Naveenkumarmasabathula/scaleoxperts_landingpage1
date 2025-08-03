@@ -140,7 +140,7 @@ export function AboutSection() {
               viewport={{ once: true }}
             >
               Join hundreds of businesses that have transformed their growth with ScaleOxperts. 
-              Experience the platform that&apos;s revolutionizing how companies scale in the digital age.
+              Experience the platform that&#39;s revolutionizing how companies scale in the digital age.
             </motion.p>
             
             {/* Primary CTA with Liquid Button - Enhanced Floating Effect */}

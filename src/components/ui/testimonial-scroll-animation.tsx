@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import Image from 'next/image';
 
 export const TestimonialScroll = ({
   titleComponent,
@@ -60,7 +61,7 @@ export const TestimonialScroll = ({
   );
 };
 
-export const TestimonialHeader = ({ translate, titleComponent }: { translate: any; titleComponent?: React.ReactNode }) => {
+export const TestimonialHeader = ({ translate, titleComponent }: { translate: MotionValue<number>; titleComponent?: React.ReactNode }) => {
   return (
     <motion.div
       style={{
@@ -156,9 +157,11 @@ const TestimonialItem = ({
       
       <div className="flex items-center gap-3 mt-6 pt-4 border-t border-border/10">
         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center overflow-hidden">
-          <img
+          <Image
             src={testimonial.avatar}
             alt={testimonial.name}
+            width={150}
+            height={150}
             className="w-full h-full object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;

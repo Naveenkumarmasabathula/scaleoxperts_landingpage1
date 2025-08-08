@@ -1,137 +1,71 @@
-"use client";
+'use client'
 
-import { Mail, Phone, Linkedin, Instagram, Twitter } from "lucide-react";
+import React from 'react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-muted/50 border-t">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-foreground">ScaleOxperts</h3>
-            <p className="text-sm text-muted-foreground">
-              Transforming businesses through data-driven growth marketing strategies.
+    <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Logo and Company Info */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
+                <span className="font-bold text-white text-xl">DM</span>
+              </div>
+              <span className="text-xl font-bold">Digital Marketing Pro</span>
+            </div>
+            <p className="text-gray-400 leading-relaxed">
+              We help businesses grow their online presence through comprehensive digital marketing strategies and data-driven results.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
+          </div>
+
+          {/* Contact Information */}
+          <div>
+            <h3 className="text-lg font-bold mb-6">Contact Information</h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-orange-500" />
+                <span>+91 98765 43210</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-orange-500" />
+                <span>hello@digitalmarketingpro.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-5 h-5 text-orange-500" />
+                <span>Mumbai, Maharashtra, India</span>
+              </div>
             </div>
           </div>
 
-          {/* Services */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Services</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Growth Marketing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Lead Generation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Conversion Optimization
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Customer Retention
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Company</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Case Studies
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Careers
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Contact</h4>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:hello@scaleoxperts.com" className="hover:text-foreground transition-colors">
-                  hello@scaleoxperts.com
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+1-555-123-4567" className="hover:text-foreground transition-colors">
-                  +1 (555) 123-4567
-                </a>
-              </div>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+            <div className="space-y-3">
+              <a href="#services" className="block text-gray-400 hover:text-white transition-colors">
+                Our Services
+              </a>
+              <a href="#testimonials" className="block text-gray-400 hover:text-white transition-colors">
+                Testimonials
+              </a>
+              <a href="#contact" className="block text-gray-400 hover:text-white transition-colors">
+                Contact Us
+              </a>
+              <a href="/privacy-policy" className="block text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t">
-          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-sm text-muted-foreground">
-              © 2024 ScaleOxperts. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Digital Marketing Pro. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
-} 
+};
+
+export default Footer;

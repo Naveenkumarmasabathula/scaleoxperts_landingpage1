@@ -1,23 +1,31 @@
-import Header from "@/components/Header";
-import { MarketingHeroDemo } from "@/components/MarketingHeroDemo";
-import Benefits from "@/components/Benefits";
-import SocialProof from "@/components/SocialProof";
-import Testimonials from "@/components/Testimonials";
-import About from "@/components/About";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
+import React from 'react';
+import Hero from '../components/Hero';
+import ContactForm from '../components/ContactForm';
+import WhoNeedsThis from '../components/WhoNeedsThis';
+import WhatYouGet from '../components/WhatYouGet';
+import Services from '../components/Services';
+import WhyChooseUs from '../components/WhyChooseUs';
+import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer';
 
-export default function Home() {
+function App() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: "hsl(var(--background))" }}>
-      <Header />
-      <MarketingHeroDemo />
-      <Benefits />
-      <SocialProof />
+    <div className="min-h-screen">
+      <Hero />
+      <ContactForm />
+      <WhoNeedsThis />
+      <WhatYouGet />
+      <Services />
+      <WhyChooseUs />
       <Testimonials />
-      <About />
-      <FAQ />
+      <ContactForm 
+        title="Ready to grab your free audit?"
+        subtitle="Let's Talk! No Sales, Just Support."
+        ctaText="Send Me the Audit form"
+      />
       <Footer />
-    </main>
+    </div>
   );
 }
+
+export default App;

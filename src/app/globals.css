@@ -2,6 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
+
 :root { 
   --background: 223.8136 -172.5242% 100.0000%; 
   --foreground: 223.8136 0.0000% 3.9388%; 
@@ -103,6 +105,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));

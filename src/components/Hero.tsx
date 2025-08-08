@@ -1,18 +1,18 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Clock, ArrowRight, CheckCircle } from 'lucide-react';
+import { Clock, ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 4,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
+      setTimeLeft((prev) => {
         if (prev.seconds > 0) {
           return { ...prev, seconds: prev.seconds - 1 };
         } else if (prev.minutes > 0) {
@@ -28,7 +28,10 @@ const Hero: React.FC = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+919999999999?text=I want to claim my free digital marketing audit', '_blank');
+    window.open(
+      'https://wa.me/+919999999999?text=I want to claim my free digital marketing audit',
+      '_blank'
+    );
   };
 
   return (
@@ -83,14 +86,14 @@ const Hero: React.FC = () => {
 
       {/* Main Hero Section */}
       <div className="bg-gradient-to-br from-orange-500 via-orange-600 to-red-600 relative">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="absolute inset-0 bg-black opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
           <div className="text-center text-white">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Generate leads and sales for your business with comprehensive 
+              Generate leads and sales for your business with comprehensive
               <span className="text-yellow-300"> Digital Marketing Services</span>
             </h2>
-            
+
             <button
               onClick={handleWhatsAppClick}
               className="bg-white text-orange-600 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl mb-12 inline-flex items-center gap-2"

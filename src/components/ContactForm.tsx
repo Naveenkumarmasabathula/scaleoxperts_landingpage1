@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
@@ -7,39 +7,37 @@ interface ContactFormProps {
   title?: string;
   subtitle?: string;
   ctaText?: string;
-  showThankYou?: boolean;
   onSubmit?: () => void;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({
-  title = "GET IN TOUCH WITH US",
+  title = 'GET IN TOUCH WITH US',
   subtitle = "Let's Talk! No Sales, Just Support.",
-  ctaText = "Send Me the Audit form",
-  showThankYou = false,
-  onSubmit
+  ctaText = 'Send Me the Audit form',
+  onSubmit,
 }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     website: '',
-    whatsapp: ''
+    whatsapp: '',
   });
+
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // WhatsApp message with form data
+
     const message = `Hi! I want to claim my free digital marketing audit.
     
 Name: ${formData.name}
 Email: ${formData.email}
 Website: ${formData.website || 'Not provided'}
 WhatsApp: ${formData.whatsapp}`;
-    
-    const whatsappUrl = `https://wa.me/+919999999999?text=${encodeURIComponent(message)}`;
+
+    const whatsappUrl = `https://wa.me/+91?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-    
+
     setSubmitted(true);
     onSubmit?.();
   };
@@ -47,7 +45,7 @@ WhatsApp: ${formData.whatsapp}`;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -60,7 +58,7 @@ WhatsApp: ${formData.whatsapp}`;
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h3>
           <p className="text-gray-600 mb-6">
-            Your request has been submitted. We'll get back to you within 24 hours with your comprehensive digital marketing audit.
+            Your request has been submitted. We&apos;ll get back to you within 24 hours with your comprehensive digital marketing audit.
           </p>
           <button
             onClick={() => setSubmitted(false)}

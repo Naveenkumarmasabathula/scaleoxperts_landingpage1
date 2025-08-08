@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
           {/* Logo and Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-white text-xl">DM</span>
-              </div>
-              <span className="text-xl font-bold">Digital Marketing Pro</span>
+              {/* <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
+                <span className="font-bold text-white text-xl"></span>
+              </div> */}
+              <span className="text-xl font-bold">Scaleoxperts</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               We help businesses grow their online presence through comprehensive digital marketing strategies and data-driven results.
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-orange-500" />
-                <span>+91 98765 43210</span>
+                <span>+91 80081 29875</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-orange-500" />
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-orange-500" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>3rd Floor, Oyster Complex, Somajiguda, Hyderabad, India</span>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Digital Marketing Pro. All rights reserved.</p>
+          <p>&copy; 2025 Scaleoxperts. All rights reserved.</p>
         </div>
       </div>
     </footer>

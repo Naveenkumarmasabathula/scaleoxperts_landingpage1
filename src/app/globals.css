@@ -27,4 +27,7 @@
   .delay-1000 {
     animation-delay: 1000ms;
   }
+  .pause:hover {
+    animation-play-state: paused;
+  }
 }

@@ -36,10 +36,10 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6">
+    <div className="bg-gradient-to-br from-orange-100 to-orange-100 py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">TESTIMONIALS</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">TESTIMONIALS</h2>
           <p className="text-xl text-gray-600 mb-2">What Business Owners Are Saying</p>
           <div className="flex justify-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
@@ -56,7 +56,7 @@ const Testimonials: React.FC = () => {
               key={review.id}
               className="bg-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="relative overflow-hidden rounded-xl h-96">
+              <div className="relative overflow-hidden rounded-xl h-64 sm:h-80 md:h-96">
                 <Image
                   src={review.src}
                   alt={review.alt}
@@ -68,6 +68,7 @@ const Testimonials: React.FC = () => {
                   ✓ Verified
                 </div>
               </div>
+
             </div>
           ))}
         </div>
@@ -105,7 +106,7 @@ const Testimonials: React.FC = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Ready to grow your Business?</h3>
+          <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Ready to grow your Business?</h3>
           <p className="text-lg text-gray-600 mb-8">
             Join our success stories and get your free digital marketing audit today!
           </p>

@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Clock, ArrowRight } from 'lucide-react';
+import TrustedBySection from './TrustedBy';
+import Image from 'next/image';
 
 const Hero: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -37,7 +39,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Orange Gradient Banner */}
-      <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 text-white py-4 px-4 sm:px-6">
+      <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white py-4 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 leading-tight">
             Uncover exactly what&apos;s holding your business back online with our Digital marketing audit worth ₹7,999 for <span className="text-yellow-300">free</span>
@@ -55,7 +57,7 @@ const Hero: React.FC = () => {
       <div className="bg-[#fffaf4] text-black py-4 px-4 sm:px-6 border-b-2 border-orange-200">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <Clock className="w-5 h-5 text-orange-600" />
+            <Clock className="w-10 h-10 text-orange-600" />
             <span className="text-sm sm:text-base font-semibold">
               Claim within 4 hours for Bonus Business growth strategy audit and competitor analysis
             </span>
@@ -85,11 +87,11 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Main Hero Section */}
-      <div className="bg-gradient-to-br from-orange-500 via-orange-600 to-red-600 relative">
+      <div className="bg-gradient-to-br from-brand-orange1 via-orange-600 to-red-600 relative">
         <div className="absolute inset-0 bg-black opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
           <div className="text-center text-white">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Generate leads and sales for your business with comprehensive
               <span className="text-yellow-300"> Digital Marketing Services</span>
             </h2>
@@ -102,28 +104,18 @@ const Hero: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
             </button>
 
+
             {/* Laptop Mockup */}
             <div className="relative max-w-4xl mx-auto mb-8">
               <div className="bg-gray-800 rounded-lg p-4 shadow-2xl">
-                <div className="bg-white rounded aspect-video flex items-center justify-center p-8">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-700">
-                    <div className="text-center p-4 bg-blue-50 rounded-lg">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-semibold">SEO</div>
-                    </div>
-                    <div className="text-center p-4 bg-green-50 rounded-lg">
-                      <div className="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-semibold">Performance Marketing</div>
-                    </div>
-                    <div className="text-center p-4 bg-purple-50 rounded-lg">
-                      <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-semibold">Social Media</div>
-                    </div>
-                    <div className="text-center p-4 bg-red-50 rounded-lg">
-                      <div className="w-8 h-8 bg-red-500 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-semibold">Paid Ads</div>
-                    </div>
-                  </div>
+                <div className="bg-[#f49312] rounded aspect-video flex items-center justify-center p-8">
+                  <Image
+                    src="/Hero.png" // replace with your image path
+                    alt="Our Service"
+                    width={800} // adjust for your image size
+                    height={600}
+                    className="rounded-lg object-contain"
+                  />
                 </div>
               </div>
             </div>
@@ -137,16 +129,8 @@ const Hero: React.FC = () => {
             </button>
 
             {/* Trusted By Section */}
-            <div className="mt-12">
-              <p className="text-lg mb-6 opacity-90">Trusted by</p>
-              <div className="flex justify-center items-center gap-8 flex-wrap">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <div key={i} className="bg-white bg-opacity-20 px-6 py-3 rounded-lg">
-                    <div className="w-20 h-8 bg-white bg-opacity-30 rounded"></div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <TrustedBySection />
+
           </div>
         </div>
       </div>

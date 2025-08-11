@@ -39,14 +39,14 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6">
+    <div className="bg-orange-500 py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Who We Are Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             WHO WE ARE AND SERVICES WE OFFER
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-100 max-w-3xl mx-auto mb-8">
             We are a team of experienced digital marketing professionals dedicated to helping businesses grow their online presence and achieve measurable results through data-driven strategies.
           </p>
 

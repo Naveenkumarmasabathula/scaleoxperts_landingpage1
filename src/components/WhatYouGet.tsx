@@ -33,10 +33,10 @@ const WhatYouGet: React.FC = () => {
   };
 
   return (
-    <div className="bg-white py-16 px-4 sm:px-6">
+    <div className="bg-orange-100 py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             WHAT YOU GET IN OUR FREE DIGITAL MARKETING AUDIT
           </h2>
           <div className="inline-block bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-semibold">
@@ -65,7 +65,7 @@ const WhatYouGet: React.FC = () => {
           </div>
 
           {/* Attractive Image Placeholder */}
-          <div className="bg-gradient-to-br from-orange-100 to-red-100 p-8 rounded-2xl flex items-center justify-center">
+          <div className="bg-gradient-to-br from-orange-400 to-orange-400 p-8 rounded-2xl flex items-center justify-center">
             <div className="text-center">
               <div className="w-32 h-32 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-16 h-16 text-white" />

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { TrendingDown, Target, Users, BarChart3, Search, MessageCircle, Vibrate as Strategy, DollarSign } from 'lucide-react';
+import { TrendingDown, Target, Users, BarChart3, Search, MessageCircle, Vibrate as Strategy, DollarSign, CheckCircle } from 'lucide-react';
 
 const WhoNeedsThis: React.FC = () => {
   const problems = [
@@ -28,20 +28,20 @@ const WhoNeedsThis: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6">
+    <div className="bg-gray-50 bg-orange-500 py-4 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             WHO NEEDS THIS SERVICE?
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-orange-100">
             You need our Digital Marketing Service if you:
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {problems.map((problem, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div key={index} className=" border-0.5 border-orange-500 bg-orange-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${problem.color}`}>
                 <problem.icon className="w-6 h-6" />
               </div>
@@ -50,18 +50,18 @@ const WhoNeedsThis: React.FC = () => {
           ))}
         </div>
 
-        <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-sm mb-12">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8">
+        <div className="bg-orange-100 p-8 sm:p-12 rounded-2xl shadow-sm mb-12">
+          <h3 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-8">
             Who Is This For?
           </h3>
-          <p className="text-xl text-center text-gray-600 mb-8">
+          <p className="text-xl text-center text-orange-500 mb-8">
             This Free Audit is Best For…
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {targetAudience.map((audience, index) => (
               <div key={index} className="flex items-center gap-3 p-4 bg-orange-50 rounded-lg">
-                <div className="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0"></div>
+                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-800 font-medium">{audience}</span>
               </div>
             ))}

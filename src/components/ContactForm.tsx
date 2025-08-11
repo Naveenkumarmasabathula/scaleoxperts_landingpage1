@@ -72,10 +72,10 @@ WhatsApp: ${formData.whatsapp}`;
   }
 
   return (
-    <div className="bg-white py-16 px-4 sm:px-6">
+    <div className="bg-orange-100 py-16 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-8">
-          <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{title}</h3>
+          <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">{title}</h3>
           <p className="text-xl text-gray-600">{subtitle}</p>
         </div>
 
@@ -145,7 +145,7 @@ WhatsApp: ${formData.whatsapp}`;
 
           <button
             type="submit"
-            className="w-full bg-orange-600 text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            className="w-full bg-orange-400 text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-500 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
           >
             <Send className="w-5 h-5" />
             {ctaText}

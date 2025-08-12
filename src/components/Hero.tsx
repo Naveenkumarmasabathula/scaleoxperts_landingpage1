@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Orange Gradient Banner */}
-      <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white py-4 px-4 sm:px-6">
+      <div className=" bg-orange-gradient  text-white py-4 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 leading-tight">
             Uncover exactly what&apos;s holding your business back online with our Digital marketing audit worth ₹7,999 for <span className="text-yellow-300">free</span>
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Main Hero Section */}
-      <div className="bg-gradient-to-br from-brand-orange1 via-orange-600 to-red-600 relative">
+      <div className="bg-orange-gradient relative">
         <div className="absolute inset-0 bg-black opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
           <div className="text-center text-white">
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
 
             <button
               onClick={handleWhatsAppClick}
-              className="bg-white text-orange-600 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl mb-12 inline-flex items-center gap-2"
+              className="bg-white text-orange-600 font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl  inline-flex items-center gap-2"
             >
               Get free audit
               <ArrowRight className="w-5 h-5" />
@@ -106,19 +106,21 @@ const Hero: React.FC = () => {
 
 
             {/* Laptop Mockup */}
-            <div className="relative max-w-4xl mx-auto mb-8">
-              <div className="bg-gray-800 rounded-lg p-4 shadow-2xl">
-                <div className="bg-[#f49312] rounded aspect-video flex items-center justify-center p-8">
+
+            <div className="aspect-video flex items-center justify-center">
                   <Image
                     src="/Hero.png" // replace with your image path
                     alt="Our Service"
-                    width={800} // adjust for your image size
-                    height={600}
-                    className="rounded-lg object-contain"
+                    width={650} // adjust for your image size
+                    height={450}
+                    className="rounded-lg object-contain  "
                   />
-                </div>
-              </div>
             </div>
+            {/* <div className="relative max-w-4xl mx-auto mb-8">
+              <div className="bg-gray-800 rounded-lg p-4 shadow-2xl">
+                
+              </div>
+            </div> */}
 
             <button
               onClick={handleWhatsAppClick}

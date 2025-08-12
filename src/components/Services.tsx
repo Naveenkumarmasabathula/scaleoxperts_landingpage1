@@ -39,7 +39,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <div className="bg-orange-500 py-16 px-4 sm:px-6">
+    <div className="bg-orange-gradient py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Who We Are Section */}
         <div className="text-center mb-16">
@@ -53,7 +53,7 @@ const Services: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+              <div key={index} className="bg-[#fffaf4] text-black p-6 rounded-xl shadow-sm">
                 <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
@@ -69,7 +69,7 @@ const Services: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-[#fffaf4] text-black p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${service.color}`}>
                   <service.icon className="w-8 h-8" />
                 </div>

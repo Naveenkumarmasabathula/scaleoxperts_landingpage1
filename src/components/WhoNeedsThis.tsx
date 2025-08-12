@@ -28,7 +28,7 @@ const WhoNeedsThis: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-50 bg-orange-500 py-4 px-4 sm:px-6">
+    <div className="bg-orange-gradient py-4 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -39,9 +39,9 @@ const WhoNeedsThis: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
           {problems.map((problem, index) => (
-            <div key={index} className=" border-0.5 border-orange-500 bg-orange-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div key={index} className=" border-4 border-gray-800 bg-[#fffaf4] text-black p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
               <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${problem.color}`}>
                 <problem.icon className="w-6 h-6" />
               </div>
@@ -50,7 +50,7 @@ const WhoNeedsThis: React.FC = () => {
           ))}
         </div>
 
-        <div className="bg-orange-100 p-8 sm:p-12 rounded-2xl shadow-sm mb-12">
+        <div className="bg-[#fffaf4] text-black p-8 sm:p-12 rounded-2xl shadow-sm mb-12">
           <h3 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-8">
             Who Is This For?
           </h3>

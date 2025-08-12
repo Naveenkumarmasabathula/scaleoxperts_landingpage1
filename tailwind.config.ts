@@ -18,6 +18,9 @@ const config: Config = {
       animation: {
         slide: "slide 25s linear infinite", // slow enough for smoothness
       },
+      backgroundImage: {
+        'orange-gradient': 'linear-gradient(346deg,rgba(244, 147, 18, 1) 100%, rgba(255, 169, 55, 1) 50%, rgba(255, 195, 92, 1) 100%)',
+      },
       colors: {
         brand: {
           orange1: "#f49312",

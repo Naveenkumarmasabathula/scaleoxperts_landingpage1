@@ -12,17 +12,18 @@ function App() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ContactForm />
+      <section id="contact">
+        <ContactForm />
+      </section>
       <WhoNeedsThis />
       <WhatYouGet />
-      <Services />
+      <section id='services'>
+        <Services />
+      </section>
       {/* <WhyChooseUs /> */}
-      <Testimonials />
-      {/* <ContactForm 
-        title="Ready to grab your free audit?"
-        subtitle="Let's Talk! No Sales, Just Support."
-        ctaText="Send Me the Audit form"
-      /> */}
+      <section id="testimonials">
+        <Testimonials />
+      </section>
       <Footer />
     </div>
   );

@@ -72,7 +72,7 @@ WhatsApp: ${formData.whatsapp}`;
   }
 
   return (
-    <div className="bg-orange-100 py-16 px-4 sm:px-6">
+    <div className="bg-[#fffaf4] text-black py-16 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-8">
           <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">{title}</h3>

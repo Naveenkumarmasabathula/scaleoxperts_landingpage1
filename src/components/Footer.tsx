@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-orange-500 text-white py-12 px-4 sm:px-6">
+    <footer className="bg-orange-gradient text-white py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Company Info */}
